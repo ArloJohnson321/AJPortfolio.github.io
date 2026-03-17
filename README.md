@@ -31,8 +31,8 @@ Then save and wait ~1–2 minutes for deploy.
 python3 -m http.server 8000
 ```
 
-Open `http://127.0.0.1:8000/`.
+Then open: `http://127.0.0.1:8000/`
 
-## Django note
+## About the Django files
 
-The Django scaffold (`manage.py`, `config/`, `portfolio/`) remains in this repo for backend hosting (Render/Railway/Fly.io). GitHub Pages can only host static files.
+Your Django scaffold is still in this repo (`manage.py`, `config/`, `portfolio/`) for future backend deployment on a platform like Render, Railway, or Fly.io.
