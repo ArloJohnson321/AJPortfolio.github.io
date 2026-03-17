@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }} | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <p class="intro">Hi, I'm</p>
+        <h1>{{ name }}</h1>
+        <p class="subtitle">{{ title }}</p>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>About</h2>
+            <p>{{ about }}</p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul class="skill-list">
+                {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="project-grid">
+                {% for project in projects %}
+                    <article class="project-card">
+                        <h3>{{ project.name }}</h3>
+                        <p>{{ project.description }}</p>
+                        <small>{{ project.tech }}</small>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <li>Email: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+                <li>GitHub: <a href="{{ contact.github }}">{{ contact.github }}</a></li>
+                <li>LinkedIn: <a href="{{ contact.linkedin }}">{{ contact.linkedin }}</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
