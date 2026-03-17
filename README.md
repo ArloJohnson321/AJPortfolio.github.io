@@ -25,14 +25,20 @@ Go to **Repo → Settings → Pages** and set:
 
 Then save and wait ~1–2 minutes for deploy.
 
+## Quick verify checklist
+
+1. Confirm Pages source matches where `index.html` exists (`/` or `/docs`).
+2. Open `https://<username>.github.io/<repo>/` in an incognito window.
+3. If you still see the old page, hard refresh (`Ctrl+Shift+R`) and wait another minute.
+
 ## Local preview
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open: `http://127.0.0.1:8000/`
+Open `http://127.0.0.1:8000/`.
 
-## About the Django files
+## Django note
 
-Your Django scaffold is still in this repo (`manage.py`, `config/`, `portfolio/`) for future backend deployment on a platform like Render, Railway, or Fly.io.
+The Django scaffold (`manage.py`, `config/`, `portfolio/`) remains in this repo for backend hosting (Render/Railway/Fly.io). GitHub Pages can only host static files.
